@@ -30,6 +30,8 @@ jobs:
       - run: mvn integration-test #cobertura:cobertura
       - store_test_results:
           path: target/surefire-reports
+      - orbs:
+          codecov: codecov/codecov@3.1.1
       - run:
           name: Send to CodeCov
           command: bash <(curl -s https://codecov.io/bash)
@@ -37,7 +39,12 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
+  upload-to-codecov:
+    jobs:
+      - checkout
+      - codecov/upload
   build-recipe-wf:  # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
+      -
