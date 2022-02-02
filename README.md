@@ -1,1 +1,3 @@
+[![CircleCI](https://circleci.com/gh/rshekhar-java/spring5-mysql-recipe-app/tree/mysql-script.svg?style=svg)](https://circleci.com/gh/rshekhar-java/spring5-mysql-recipe-app/tree/mysql-script)
+[![codecov](https://codecov.io/gh/rshekhar-java/spring5-mysql-recipe-app/branch/master/graph/badge.svg?token=TDK1E8DIP7)](https://codecov.io/gh/rshekhar-java/spring5-mysql-recipe-app)
 # spring5-mysql-recipe-app
