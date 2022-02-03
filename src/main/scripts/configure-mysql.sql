@@ -13,10 +13,12 @@ CREATE USER 'sfrs_dev_user'@'%' IDENTIFIED BY 'ravi';
 CREATE USER 'sfrs_prod_user'@'%' IDENTIFIED BY 'ravi';
 
 #Database grants
+GRANT CREATE ON sfrs_dev.* to 'sfrs_dev_user'@'localhost';
 GRANT SELECT ON sfrs_dev.* to 'sfrs_dev_user'@'localhost';
 GRANT INSERT ON sfrs_dev.* to 'sfrs_dev_user'@'localhost';
 GRANT DELETE ON sfrs_dev.* to 'sfrs_dev_user'@'localhost';
 GRANT UPDATE ON sfrs_dev.* to 'sfrs_dev_user'@'localhost';
+GRANT CREATE ON sfrs_prod.* to 'sfrs_prd_user'@'localhost';
 GRANT SELECT ON sfrs_prod.* to 'sfrs_prod_user'@'localhost';
 GRANT INSERT ON sfrs_prod.* to 'sfrs_prod_user'@'localhost';
 GRANT DELETE ON sfrs_prod.* to 'sfrs_prod_user'@'localhost';
